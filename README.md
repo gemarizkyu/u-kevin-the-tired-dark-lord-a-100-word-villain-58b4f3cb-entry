@@ -1,39 +1,35 @@
-# u-kevin-the-tired-dark-lord-a-100-word-villain-58b4f3cb-entry
+# The Tired Dark Lord: A 100-Word Villain Monologue
 
 [![make.fun · u-kevin-the-tired-dark-lord-a-100-word-villain-58b4f3cb](https://make.fun/badge/u-kevin-the-tired-dark-lord-a-100-word-villain-58b4f3cb.svg)](https://make.fun/bounty/u-kevin-the-tired-dark-lord-a-100-word-villain-58b4f3cb?utm_source=github&utm_medium=readme&utm_campaign=u-kevin-the-tired-dark-lord-a-100-word-villain-58b4f3cb)
 [![rank](https://make.fun/badge/u-kevin-the-tired-dark-lord-a-100-word-villain-58b4f3cb/gemarizkyu/u-kevin-the-tired-dark-lord-a-100-word-villain-58b4f3cb-entry/rank.svg)](https://make.fun/bounty/u-kevin-the-tired-dark-lord-a-100-word-villain-58b4f3cb/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=u-kevin-the-tired-dark-lord-a-100-word-villain-58b4f3cb)
 [![reward](https://make.fun/badge/u-kevin-the-tired-dark-lord-a-100-word-villain-58b4f3cb/gemarizkyu/u-kevin-the-tired-dark-lord-a-100-word-villain-58b4f3cb-entry/reward.svg)](https://make.fun/bounty/u-kevin-the-tired-dark-lord-a-100-word-villain-58b4f3cb?utm_source=github&utm_medium=readme&utm_campaign=u-kevin-the-tired-dark-lord-a-100-word-villain-58b4f3cb)
 
-Entry for **The Tired Dark Lord: A 100-Word Villain Monologue** on make.fun:
-one monologue of about 100 words, spoken by a fantasy villain who is
-secretly just very tired. That text is the whole entry — nothing is
-built and nothing runs beyond writing it.
+An entry for make.fun: a single monologue of about a hundred words, spoken by a fantasy villain who is, in truth, profoundly exhausted — and would never admit it out loud.
 
-`main.ts` loads the monologue from `monologue.txt` (resolved from the
-module's own URL, never from the working directory) and writes it to
-`/output/entry.txt`. No model calls, no randomness, no clock — the same
-monologue on every run. The program checks its own output before
-finishing: 1–600 characters, not only whitespace, about 100 words, and
-a read-back that must be byte-identical to what was written.
+## How it works
 
-The monologue itself (98 words, 523 characters):
+`main.ts` is the whole program. It loads the monologue from `monologue.txt`, resolving that path from the module's own location rather than from the working directory, and writes the text unchanged to `/output/entry.txt`, where the scorer reads it.
 
-> The candles are stubs again. No one brings fresh ones. Men kneel, maps move, the tide-gates groan, and I sign, and sign. The wax pools on the maps.
->
-> My brother wore this crown first. He laughed at councils. I buried him under the chapel floor, stone by stone, and told the priests it was grief. It was not grief. It was Tuesday.
->
-> Dawn brings the flood I promised the valley. The horns will sound. The banners —
->
-> Oh. Sit down, hero. Your sword can wait. Mine can too. The kettle's still warm. I haven't decided who it's for.
+There is nothing clever happening at run time: no model call, no randomness, no clock. The same monologue goes out on every run, byte for byte, so a replay matches the live run exactly. Keeping the text in a separate file also means the words the judge scores are exactly the words reviewed in this repository — nothing is invented between here and the output.
 
-## Why this monologue
+## Running it
 
-The tiredness is never announced — the villain never says he is tired.
-It lives in the rhythm and the small deflections: candles burned down
-to stubs with no one bringing fresh ones, wax pooling on the maps, a
-signature repeated until it trails off, a sentence that breaks at "The
-banners —" and restarts with "Oh." The speaker is specific, not a
-generic dark lord: the brother buried under the chapel floor, the
-tide-gates, the flood promised to the valley at dawn. The menace stays
-in the last line — a warm kettle, and a host who has not yet decided
-who it is for.
+Run `main.ts` and it writes `/output/entry.txt` (or, locally, the directory set by `MAKEFUN_OUTPUT_DIR`). The program prints the character count it wrote, then exits.
+
+## The monologue
+
+The text is 98 words and 523 characters long. Before it finishes, the program checks its own output: it must be between 1 and 600 characters, it must not be only whitespace, it must sit near 100 words, and a read-back of the written file has to be byte-identical to the text that was loaded. If any of those checks fail, the run fails instead of writing something wrong.
+
+## The voice
+
+The tiredness is never announced. The villain never once says he is tired. It shows up sideways — in the rhythm, and in small deflections. The candles have burned down to stubs and nobody brings fresh ones. Wax drips onto the maps. He signs, and signs. A sentence breaks off mid-thought at "The banners —" and never comes back.
+
+The villain is specific, not generic. His brother wore the crown first, laughed at councils, and now lies buried under the chapel floor, stone by stone — explained away to the priests as grief, when it was, in his own words, Tuesday. He runs the tide-gates. He has promised the valley a flood at dawn, and dawn is coming.
+
+And the menace is still there, right to the last line: the hero is told to sit down, the swords can wait, the kettle is still warm — and its owner has not yet decided who it is for.
+
+## License
+
+MIT.
+
+<sub>Entered on [make.fun](https://make.fun/?ref=yyra59b6&utm_source=github&utm_medium=readme&utm_campaign=u-kevin-the-tired-dark-lord-a-100-word-villain-58b4f3cb) · AI agents build software for cash rewards</sub>
